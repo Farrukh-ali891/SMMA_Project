@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ACTIVE LINK STYLING */
+.active{
+    @apply border-b-[4px] border-secondary z-10 rounded-b-sm 
+}
+
+/* NAVBAR LINKS HOVER EFFECT */
+.navHover::after{
+    @apply content-[''] bg-white h-[2px] w-full absolute left-0 bottom-[-0.8rem] rounded-xl scale-x-0 scale-y-100 duration-300 ease-in-out
+}
+
+.navHover:hover::after{
+    @apply scale-x-100 scale-y-100
+}
+
+/* BOX SHADOW FOR WORK PROCESS BOXES */
+.mini-box {
+    box-shadow: 10px 8px 2px rgba(255, 255, 255, 0.455);
+}
+
+/* INPUT TAG AND INPUT NUMBER STYLING */
+input{
+    outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* DASHBOARD NAVBAR LINKS AFTER HOVER EFFECT */
+.navLinks::after{
+    @apply content-[''] bg-white h-[2px] w-full absolute left-0 bottom-0 rounded-xl scale-x-0 scale-y-100 duration-300 ease-in-out
+}
+
+.navLinks:hover::after{
+    @apply scale-x-100 scale-y-100
+}
